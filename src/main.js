@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
+const mobileMediaBreakpoint = gsap.matchMedia(); // (max-width: 768px)
 
-const menuItems = () => {
+//============================= Import nav & header items ==============================//
+const getMenuItems = () => {
   const mobileMenuHamburger = document.querySelector(".mob-menu-hamburger");
   const navMenu = document.querySelector("#nav-menu");
   const navMenuItems = document.querySelectorAll("#nav-menu li");
@@ -16,9 +18,10 @@ const menuItems = () => {
   };
 };
 
+//============================= Transition nav-bar on scroll ==============================//
 const navbarScrollEffect = () => {
-  menuItems().navContainer.style.fontSize = "2.25rem";
-  menuItems().mobileMenuHamburger.style.fontSize = "2.25rem";
+  getMenuItems().navContainer.style.fontSize = "2.25rem";
+  getMenuItems().mobileMenuHamburger.style.fontSize = "2.25rem";
 
   gsap.to(["#header-info"], {
     background: "rgb(0,0,0)",
@@ -30,23 +33,28 @@ const navbarScrollEffect = () => {
       start: "bottom 100px",
       end: "bottom 100px",
       scrub: true,
+
+      // Change the styling of the navbar based on scrolltrigger position (bottom of video element)
       onLeave: () => {
-        menuItems().navContainer.style.fontSize = "1.5rem";
-        menuItems().mobileMenuHamburger.style.fontSize = "1.5rem";
-        menuItems().navContainer.style.transition = "500ms";
-        menuItems().mobileMenuHamburger.style.transition = "500ms";
+        getMenuItems().navContainer.style.fontSize = "1.5rem";
+        getMenuItems().navContainer.style.padding = "0.5rem 1rem";
+        getMenuItems().navContainer.style.transition = "500ms";
+        getMenuItems().mobileMenuHamburger.style.fontSize = "1.5rem";
+        getMenuItems().mobileMenuHamburger.style.transition = "500ms";
       },
       onEnterBack: () => {
-        menuItems().navContainer.style.fontSize = "2.25rem";
-        menuItems().mobileMenuHamburger.style.fontSize = "2.25rem";
+        getMenuItems().navContainer.style.fontSize = "2.25rem";
+        getMenuItems().navContainer.style.padding = "1rem";
+        getMenuItems().mobileMenuHamburger.style.fontSize = "2.25rem";
       },
     },
   });
 };
 navbarScrollEffect();
 
+//============================= Animate nav menu item on hover ==============================//
 const menuItemHoverAnim = () => {
-  menuItems().navMenuItems.forEach((item) => {
+  getMenuItems().navMenuItems.forEach((item) => {
     const anim = gsap.to(item, {
       paused: true,
       x: -10,
@@ -65,11 +73,10 @@ const menuItemHoverAnim = () => {
 };
 menuItemHoverAnim();
 
+//============================= Animation and function to open the nav menu ==============================//
 const openMobileMenu = () => {
   const menuTimeline = gsap.timeline();
-  const mobile = gsap.matchMedia();
-
-  mobile.add("(max-width: 768px)", () => {
+  mobileMediaBreakpoint.add("(max-width: 768px)", () => {
     menuTimeline.pause();
 
     menuTimeline.fromTo(
@@ -84,12 +91,12 @@ const openMobileMenu = () => {
       { opacity: 1, xPercent: 0, stagger: 0.07 },
     );
 
-    menuItems().mobileMenuHamburger.addEventListener("click", () => {
-      menuItems().navMenu.classList.toggle("open");
+    const { mobileMenuHamburger, logo } = getMenuItems();
 
-      const { logo, mobileMenuHamburger, navMenuItems } = menuItems();
+    getMenuItems().mobileMenuHamburger.addEventListener("click", () => {
+      getMenuItems().navMenu.classList.toggle("open");
 
-      if (menuItems().navMenu.classList.contains("open")) {
+      if (getMenuItems().navMenu.classList.contains("open")) {
         menuTimeline.timeScale(1);
         menuTimeline.play();
         logo.classList.add("text-black");
@@ -104,3 +111,24 @@ const openMobileMenu = () => {
   });
 };
 openMobileMenu();
+
+const getInfoGridItems = () => {
+  return document.querySelectorAll("#info-grid div");
+};
+
+const infoGridAnimateIn = () => {
+  mobileMediaBreakpoint.add("(max-width: 768px)", () => {
+    getInfoGridItems().forEach((item) => {
+      gsap.from(item, {
+        opacity: 0,
+        duration: 1,
+        y: 20,
+
+        scrollTrigger: {
+          trigger: item,
+        },
+      });
+    });
+  });
+};
+infoGridAnimateIn();

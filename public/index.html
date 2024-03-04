@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -33,9 +33,10 @@
         >
           menu
         </span>
+
         <ul
           id="nav-menu"
-          class="fixed left-0 top-0 flex h-screen w-screen list-none flex-col gap-10 bg-cornsilk px-10 pt-[25%] text-right font-play-fair text-2xl text-black hover:translate-x-10 md:relative md:flex-row"
+          class="fixed bottom-0 left-0 flex h-screen w-screen list-none flex-col justify-end gap-20 bg-cornsilk px-10 pb-[25%] text-right font-play-fair text-4xl text-black hover:translate-x-10 md:relative md:flex-row"
         >
           <li class="mob-menu-item">
             <a href="#" class="">Home</a>
@@ -49,7 +50,7 @@
     </header>
     <main>
       <section id="landing-page-video-section">
-        <div id="video-wrapper">
+        <div id="video-wrapper" class="mb-4">
           <video
             src="/assets/landing-page-video.mp4"
             autoplay
@@ -70,11 +71,12 @@
             Welcome to Western Grange
           </h1>
         </div>
-        <span
-          class="material-symbols-outlined absolute bottom-10 left-1/2 -translate-x-1/2 transform animate-bounce text-3xl text-cornsilk"
+        <a
+          href="#info-grid"
+          class="material-symbols-outlined absolute bottom-10 left-1/2 -translate-x-1/2 transform animate-bounce py-4 text-3xl text-cornsilk"
         >
           expand_more
-        </span>
+        </a>
       </section>
       <!--      TODO Apply grid-->
       <section
@@ -85,8 +87,8 @@
           <img src="/assets/horse jump.webp" alt="" />
         </div>
         <div class="px-4">
-          <h3 class="font-play-fair">Showjumping</h3>
-          <p>
+          <h3 class="mb-2 font-play-fair text-2xl">Showjumping</h3>
+          <p class="font-source-sans opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
             eum harum, hic ipsum, libero molestiae nobis quidem, sit veniam
@@ -97,8 +99,8 @@
           <img src="/assets/pony riding.webp" alt="" />
         </div>
         <div class="px-4 md:col-start-1 md:row-start-2 md:text-right">
-          <h3 class="font-play-fair">Pony Rides</h3>
-          <p>
+          <h3 class="mb-2 font-play-fair text-2xl">Pony Rides</h3>
+          <p class="font-source-sans opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
             eum harum, hic ipsum, libero molestiae nobis quidem, sit veniam
@@ -114,8 +116,8 @@
           />
         </div>
         <div class="px-4">
-          <h3 class="font-play-fair">Walks & Hacking</h3>
-          <p>
+          <h3 class="mb-2 font-play-fair text-2xl">Walks & Hacking</h3>
+          <p class="font-source-sans opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
             eum harum, hic ipsum, libero molestiae nobis quidem, sit veniam
@@ -126,8 +128,8 @@
           <img src="/assets/stables.webp" alt="" />
         </div>
         <div class="px-4 md:col-start-1 md:row-start-4 md:text-right">
-          <h3 class="font-play-fair">Livery</h3>
-          <p>
+          <h3 class="mb-2 font-play-fair text-2xl">Livery</h3>
+          <p class="font-source-sans opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
             eum harum, hic ipsum, libero molestiae nobis quidem, sit veniam
@@ -136,13 +138,82 @@
         </div>
       </section>
       <section id="where-to-find-section"></section>
-      <footer></footer>
+      <footer class="flex justify-evenly bg-dark-wood-green text-cornsilk">
+        <div class="flex flex-col gap-4">
+          <h3 class="font-play-fair">Contact us:</h3>
+          <p class="font-source-sans">info@westerngrange.co.uk</p>
+          <p class="font-source-sans">02476000000</p>
+          <div>
+            <!--=============== FACEBOOK ===============-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.014467 17.065322 19.313017 13.21875 19.898438 L 13.21875 14.384766 L 15.546875 14.384766 L 15.912109 12.019531 L 13.21875 12.019531 L 13.21875 10.726562 C 13.21875 9.7435625 13.538984 8.8710938 14.458984 8.8710938 L 15.935547 8.8710938 L 15.935547 6.8066406 C 15.675547 6.7716406 15.126844 6.6953125 14.089844 6.6953125 C 11.923844 6.6953125 10.654297 7.8393125 10.654297 10.445312 L 10.654297 12.019531 L 8.4277344 12.019531 L 8.4277344 14.384766 L 10.654297 14.384766 L 10.654297 19.878906 C 6.8702905 19.240845 4 15.970237 4 12 C 4 7.5698774 7.5698774 4 12 4 z"
+              ></path>
+            </svg>
+            <!--=============== INSTAGRAM ===============-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"
+              ></path>
+            </svg>
+            <!--=============== TWITTER / X ===============-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 2.3671875 3 L 9.4628906 13.140625 L 2.7402344 21 L 5.3808594 21 L 10.644531 14.830078 L 14.960938 21 L 21.871094 21 L 14.449219 10.375 L 20.740234 3 L 18.140625 3 L 13.271484 8.6875 L 9.2988281 3 L 2.3671875 3 z M 6.2070312 5 L 8.2558594 5 L 18.033203 19 L 16.001953 19 L 6.2070312 5 z"
+              ></path>
+            </svg>
+            <!--=============== YOUTUBE ===============-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M 12 4 C 12 4 5.7455469 3.9999687 4.1855469 4.4179688 C 3.3245469 4.6479688 2.6479687 5.3255469 2.4179688 6.1855469 C 1.9999687 7.7455469 2 12 2 12 C 2 12 1.9999687 16.254453 2.4179688 17.814453 C 2.6479687 18.675453 3.3255469 19.352031 4.1855469 19.582031 C 5.7455469 20.000031 12 20 12 20 C 12 20 18.254453 20.000031 19.814453 19.582031 C 20.674453 19.352031 21.352031 18.674453 21.582031 17.814453 C 22.000031 16.254453 22 12 22 12 C 22 12 22.000031 7.7455469 21.582031 6.1855469 C 21.352031 5.3255469 20.674453 4.6479688 19.814453 4.4179688 C 18.254453 3.9999687 12 4 12 4 z M 12 6 C 14.882 6 18.490875 6.1336094 19.296875 6.3496094 C 19.465875 6.3946094 19.604391 6.533125 19.650391 6.703125 C 19.891391 7.601125 20 10.342 20 12 C 20 13.658 19.891391 16.397875 19.650391 17.296875 C 19.605391 17.465875 19.466875 17.604391 19.296875 17.650391 C 18.491875 17.866391 14.882 18 12 18 C 9.119 18 5.510125 17.866391 4.703125 17.650391 C 4.534125 17.605391 4.3956094 17.466875 4.3496094 17.296875 C 4.1086094 16.398875 4 13.658 4 12 C 4 10.342 4.1086094 7.6011719 4.3496094 6.7011719 C 4.3946094 6.5331719 4.533125 6.3946094 4.703125 6.3496094 C 5.508125 6.1336094 9.118 6 12 6 z M 10 8.5351562 L 10 15.464844 L 16 12 L 10 8.5351562 z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <form>
+            <label for="newsletter-input">Sign up to our newsletter</label>
+            <input id="newsletter-input" type="text" />
+          </form>
+        </div>
+      </footer>
     </main>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1jugg5reTzcQ2UiPO2S4KABAnwP_kchA&callback=initMap&libraries=maps,marker&v=beta"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       defer
     ></script>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer
