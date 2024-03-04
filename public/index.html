@@ -23,21 +23,19 @@
 
   <body class="bg-dark-wood-green">
     <header class="relative z-10">
-      <div
+      <nav
         id="header-info"
-        class="fixed left-0 top-0 z-30 flex w-full items-center justify-between p-4"
+        class="fixed left-0 top-0 flex w-full items-center justify-between p-4"
       >
-        <h2 class="font-play-fair">WG</h2>
+        <h2 id="logo" class="relative z-30 font-play-fair">WG</h2>
         <span
-          class="mob-menu-hamburger material-symbols-outlined h-fit hover:cursor-pointer"
+          class="mob-menu-hamburger material-symbols-outlined relative z-30 h-fit hover:cursor-pointer md:hidden"
         >
           menu
         </span>
-      </div>
-      <nav>
         <ul
           id="nav-menu"
-          class="fixed left-0 top-0 flex h-screen w-screen list-none flex-col gap-10 bg-cornsilk px-10 pt-[25%] text-right font-play-fair text-2xl hover:translate-x-10"
+          class="fixed left-0 top-0 flex h-screen w-screen list-none flex-col gap-10 bg-cornsilk px-10 pt-[25%] text-right font-play-fair text-2xl text-black hover:translate-x-10 md:relative md:flex-row"
         >
           <li class="mob-menu-item">
             <a href="#" class="">Home</a>
@@ -47,6 +45,7 @@
           <li class="mob-menu-item"><a href="#">About</a></li>
         </ul>
       </nav>
+      <!--      <nav></nav>-->
     </header>
     <main>
       <section id="landing-page-video-section">
@@ -78,12 +77,15 @@
         </span>
       </section>
       <!--      TODO Apply grid-->
-      <section id="info-grid">
-        <div class="info-section info-img">
+      <section
+        id="info-grid"
+        class="grid grid-cols-1 gap-4 text-cornsilk md:grid-cols-2"
+      >
+        <div class="px-4">
           <img src="/assets/horse jump.webp" alt="" />
         </div>
-        <div class="info-section info-text">
-          <h3>Showjumping</h3>
+        <div class="px-4">
+          <h3 class="font-play-fair">Showjumping</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
@@ -91,11 +93,11 @@
             voluptatum.
           </p>
         </div>
-        <div class="info-section info-img">
+        <div class="px-4 md:col-start-2">
           <img src="/assets/pony riding.webp" alt="" />
         </div>
-        <div class="info-section info-text">
-          <h3>Pony Rides</h3>
+        <div class="px-4 md:col-start-1 md:row-start-2 md:text-right">
+          <h3 class="font-play-fair">Pony Rides</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
@@ -103,7 +105,7 @@
             voluptatum.
           </p>
         </div>
-        <div class="info-section info-img">
+        <div class="px-4">
           <img
             src="/assets/horse ride 02.webp"
             height="800"
@@ -111,8 +113,8 @@
             alt=""
           />
         </div>
-        <div class="info-section info-text">
-          <h3>Walks & Hacking</h3>
+        <div class="px-4">
+          <h3 class="font-play-fair">Walks & Hacking</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
@@ -120,11 +122,11 @@
             voluptatum.
           </p>
         </div>
-        <div class="info-section info-img">
+        <div class="px-4 md:col-start-2">
           <img src="/assets/stables.webp" alt="" />
         </div>
-        <div class="info-section info-text">
-          <h3>Livery</h3>
+        <div class="px-4 md:col-start-1 md:row-start-4 md:text-right">
+          <h3 class="font-play-fair">Livery</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
             cum dicta enim explicabo fugiat illum nobis vitae. Dolorem dolores
