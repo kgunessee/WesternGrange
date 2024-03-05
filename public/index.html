@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link href="/src/output.css" rel="stylesheet" />
+    <link href="../src/output.css" rel="stylesheet" />
     <title>Western Grange</title>
   </head>
 
@@ -25,7 +25,7 @@
     <header class="relative z-10">
       <nav
         id="header-info"
-        class="fixed left-0 top-0 flex w-full items-center justify-between p-4"
+        class="font-b fixed left-0 top-0 flex w-full items-center justify-between p-4"
       >
         <h2 id="logo" class="relative z-30 font-play-fair">WG</h2>
         <span
@@ -78,7 +78,6 @@
           expand_more
         </a>
       </section>
-      <!--      TODO Apply grid-->
       <section
         id="info-grid"
         class="grid grid-cols-1 gap-4 text-cornsilk md:grid-cols-2"
@@ -137,20 +136,27 @@
           </p>
         </div>
       </section>
-      <section id="where-to-find-section"></section>
-      <footer class="flex justify-evenly bg-dark-wood-green text-cornsilk">
-        <div class="flex flex-col gap-4">
-          <h3 class="font-play-fair">Contact us:</h3>
-          <p class="font-source-sans">info@westerngrange.co.uk</p>
-          <p class="font-source-sans">02476000000</p>
-          <div>
+      <section id="where-to-find-section">
+        <img
+          src="/assets/location.PNG"
+          alt="location of western grange"
+          class="h-[400px] w-full object-cover py-4"
+        />
+      </section>
+      <footer
+        class="flex flex-col items-center justify-evenly bg-dark-wood-green p-4 text-cornsilk"
+      >
+        <div class="flex flex-col items-center gap-4">
+          <h3 class="font-play-fair text-2xl">Contact us:</h3>
+          <p class="font-source-sans">Email: info@westerngrange.co.uk</p>
+          <p class="font-source-sans">Tel: 02476000000</p>
+          <div class="flex gap-4 fill-cornsilk">
             <!--=============== FACEBOOK ===============-->
             <svg
+              class="w-7 hover:cursor-pointer hover:opacity-70"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="48"
-              height="48"
               viewBox="0 0 24 24"
             >
               <path
@@ -159,11 +165,10 @@
             </svg>
             <!--=============== INSTAGRAM ===============-->
             <svg
+              class="w-7 hover:cursor-pointer hover:opacity-70"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="48"
-              height="48"
               viewBox="0 0 24 24"
             >
               <path
@@ -172,11 +177,10 @@
             </svg>
             <!--=============== TWITTER / X ===============-->
             <svg
+              class="w-7 hover:cursor-pointer hover:opacity-70"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="48"
-              height="48"
               viewBox="0 0 24 24"
             >
               <path
@@ -185,11 +189,10 @@
             </svg>
             <!--=============== YOUTUBE ===============-->
             <svg
+              class="w-7 hover:cursor-pointer hover:opacity-70"
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="48"
-              height="48"
               viewBox="0 0 24 24"
             >
               <path
@@ -198,9 +201,11 @@
             </svg>
           </div>
         </div>
-        <div>
+        <div class="mt-4">
           <form>
-            <label for="newsletter-input">Sign up to our newsletter</label>
+            <label for="newsletter-input" class="mr-4"
+              >Sign up to our newsletter</label
+            >
             <input id="newsletter-input" type="text" />
           </form>
         </div>
@@ -208,8 +213,9 @@
     </main>
     <script
       async
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1jugg5reTzcQ2UiPO2S4KABAnwP_kchA&callback=initMap&libraries=maps,marker&v=beta"
+      src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"
     ></script>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       defer
@@ -218,6 +224,6 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer
     ></script>
-    <script src="/src/main.js" defer></script>
+    <script src="../src/main.js" defer></script>
   </body>
 </html>

@@ -556,6 +556,10 @@ video {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .bottom-10 {
   bottom: 2.5rem;
 }
@@ -576,14 +580,6 @@ video {
   top: 50%;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -592,12 +588,25 @@ video {
   z-index: 30;
 }
 
-.mb-4 {
+.my-4 {
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
@@ -617,8 +626,8 @@ video {
   height: 100vh;
 }
 
-.h-full {
-  height: 100%;
+.h-\[400px\] {
+  height: 400px;
 }
 
 .w-\[90vw\] {
@@ -631,6 +640,22 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .-translate-x-1\/2 {
@@ -691,16 +716,12 @@ video {
   justify-content: space-evenly;
 }
 
-.gap-12 {
-  gap: 3rem;
+.gap-20 {
+  gap: 5rem;
 }
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-20 {
-  gap: 5rem;
 }
 
 .scroll-smooth {
@@ -718,6 +739,14 @@ video {
 .bg-dark-wood-green {
   --tw-bg-opacity: 1;
   background-color: hsl(105 7% 11% / var(--tw-bg-opacity));
+}
+
+.fill-amber-400 {
+  fill: #fbbf24;
+}
+
+.fill-cornsilk {
+  fill: hsla(52, 94%, 94%, 1);
 }
 
 .object-cover {
@@ -744,10 +773,6 @@ video {
   padding-bottom: 1rem;
 }
 
-.pt-\[25\%\] {
-  padding-top: 25%;
-}
-
 .pb-\[25\%\] {
   padding-bottom: 25%;
 }
@@ -768,6 +793,11 @@ video {
   font-family: Source Sans 3, sans-serif;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -776,11 +806,6 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold {
@@ -800,12 +825,9 @@ video {
   color: hsla(52, 94%, 94%, 1);
 }
 
-.opacity-90 {
-  opacity: 0.9;
-}
-
-.opacity-50 {
-  opacity: 0.5;
+.text-yellow-100 {
+  --tw-text-opacity: 1;
+  color: rgb(254 249 195 / var(--tw-text-opacity));
 }
 
 .opacity-70 {
@@ -819,6 +841,14 @@ video {
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.hover\:fill-amber-950:hover {
+  fill: #451a03;
+}
+
+.hover\:opacity-70:hover {
+  opacity: 0.7;
 }
 
 @media (min-width: 768px) {
