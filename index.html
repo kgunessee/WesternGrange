@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link href="src/output.css" rel="stylesheet" />
+    <link href="./src/output.css" rel="stylesheet" />
     <title>Western Grange</title>
   </head>
 
@@ -25,7 +25,7 @@
     <header class="relative z-10">
       <nav
         id="header-info"
-        class="font-b fixed left-0 top-0 flex w-full items-center justify-between p-4"
+        class="font-b fixed left-0 top-0 flex w-full items-center justify-between p-4 md:items-start"
       >
         <h2 id="logo" class="relative z-30 font-play-fair">WG</h2>
         <span
@@ -36,7 +36,7 @@
 
         <ul
           id="nav-menu"
-          class="fixed bottom-0 left-0 flex h-screen w-screen list-none flex-col justify-end gap-20 bg-cornsilk px-10 pb-[25%] text-right font-play-fair text-4xl text-black hover:translate-x-10 md:relative md:flex-row"
+          class="fixed bottom-0 left-0 flex h-screen w-screen list-none flex-col justify-end gap-20 bg-cornsilk px-10 pb-[25%] text-right font-play-fair text-4xl text-black hover:translate-x-10 md:relative md:h-fit md:flex-row md:gap-4 md:bg-transparent md:pb-0 md:text-xl"
         >
           <li class="mob-menu-item">
             <a href="#" class="">Home</a>
@@ -80,12 +80,12 @@
       </section>
       <section
         id="info-grid"
-        class="grid grid-cols-1 gap-4 text-cornsilk md:grid-cols-2"
+        class="grid grid-cols-1 gap-4 text-cornsilk md:grid-cols-2 md:px-[5%]"
       >
         <div class="px-4">
           <img src="assets/horse%20jump.webp" alt="" />
         </div>
-        <div class="px-4">
+        <div class="px-4 md:border-2 md:border-cornsilk md:p-4">
           <h3 class="mb-2 font-play-fair text-2xl">Showjumping</h3>
           <p class="font-source-sans opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
@@ -147,9 +147,10 @@
         class="flex flex-col items-center justify-evenly bg-dark-wood-green p-4 text-cornsilk"
       >
         <div class="flex flex-col items-center gap-4">
-          <h3 class="font-play-fair text-2xl">Contact us:</h3>
+          <h3 class="font-play-fair text-2xl">Contact us</h3>
           <p class="font-source-sans">Email: info@westerngrange.co.uk</p>
           <p class="font-source-sans">Tel: 02476000000</p>
+          <p class="font-source-sans">Western Farm, Wolvey, CV0 0RJ</p>
           <div class="flex gap-4 fill-cornsilk">
             <!--=============== FACEBOOK ===============-->
             <svg
@@ -201,20 +202,25 @@
             </svg>
           </div>
         </div>
-        <div class="mt-4">
+        <hr class="mt-4 h-[1px] w-screen border-0 bg-cornsilk" />
+        <div class="my-4 flex w-full flex-col items-center">
           <form>
-            <label for="newsletter-input" class="mr-4"
-              >Sign up to our newsletter</label
-            >
-            <input id="newsletter-input" type="text" />
+            <h3 class="mb-4 text-center font-play-fair text-2xl text-cornsilk">
+              Join our newsletter
+            </h3>
+            <div>
+              <input
+                class="border-rad h-10 border-2 border-cornsilk bg-white bg-opacity-0 px-2"
+                id="newsletter-input"
+                type="text"
+                placeholder="Enter email address"
+              />
+              <button class="h-10 bg-cornsilk p-2 text-black">Submit</button>
+            </div>
           </form>
         </div>
       </footer>
     </main>
-    <script
-      async
-      src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"
-    ></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

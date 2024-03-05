@@ -29,7 +29,7 @@ const navbarScrollEffect = () => {
 
     scrollTrigger: {
       trigger: "video",
-      markers: true,
+      markers: false,
       start: "bottom 100px",
       end: "bottom 100px",
       scrub: true,
@@ -113,22 +113,26 @@ const openMobileMenu = () => {
 openMobileMenu();
 
 const getInfoGridItems = () => {
-  return document.querySelectorAll("#info-grid div");
+  const map = document.querySelector("#where-to-find-section");
+  const gridItems = document.querySelectorAll("#info-grid div");
+  return { map, gridItems };
 };
 
 const infoGridAnimateIn = () => {
   mobileMediaBreakpoint.add("(max-width: 768px)", () => {
-    getInfoGridItems().forEach((item) => {
-      gsap.from(item, {
-        opacity: 0,
-        duration: 1,
-        y: 20,
+    [getInfoGridItems().map, ...getInfoGridItems().gridItems].forEach(
+      (item) => {
+        gsap.from(item, {
+          opacity: 0,
+          duration: 1,
+          y: 20,
 
-        scrollTrigger: {
-          trigger: item,
-        },
-      });
-    });
+          scrollTrigger: {
+            trigger: item,
+          },
+        });
+      },
+    );
   });
 };
 infoGridAnimateIn();
