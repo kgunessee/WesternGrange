@@ -53,21 +53,24 @@ const navbarScrollEffect = () => {
 navbarScrollEffect();
 
 //============================= Animate nav menu item on hover ==============================//
+
 const menuItemHoverAnim = () => {
-  getMenuItems().navMenuItems.forEach((item) => {
-    const anim = gsap.to(item, {
-      paused: true,
-      x: -10,
-      opacity: 0.7,
-      duration: 0.1,
-    });
+  mobileMediaBreakpoint.add("(max-width: 768px)", () => {
+    getMenuItems().navMenuItems.forEach((item) => {
+      const anim = gsap.to(item, {
+        paused: true,
+        x: -10,
+        opacity: 0.7,
+        duration: 0.1,
+      });
 
-    item.addEventListener("mouseover", () => {
-      anim.play();
-    });
+      item.addEventListener("mouseover", () => {
+        anim.play();
+      });
 
-    item.addEventListener("mouseout", () => {
-      anim.reverse();
+      item.addEventListener("mouseout", () => {
+        anim.reverse();
+      });
     });
   });
 };
@@ -119,20 +122,20 @@ const getInfoGridItems = () => {
 };
 
 const infoGridAnimateIn = () => {
-  mobileMediaBreakpoint.add("(max-width: 768px)", () => {
-    [getInfoGridItems().map, ...getInfoGridItems().gridItems].forEach(
-      (item) => {
-        gsap.from(item, {
-          opacity: 0,
-          duration: 1,
-          y: 20,
+  [getInfoGridItems().map, ...getInfoGridItems().gridItems].forEach((item) => {
+    gsap.from(item, {
+      opacity: 0,
+      duration: 1,
+      y: 20,
 
-          scrollTrigger: {
-            trigger: item,
-          },
-        });
+      scrollTrigger: {
+        trigger: item,
+        markers: true,
+        start: "top 90%",
       },
-    );
+    });
   });
 };
 infoGridAnimateIn();
+
+// mobileMediaBreakpoint.add("(max-width: 768px)", () => {}
