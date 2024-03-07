@@ -118,11 +118,16 @@ openMobileMenu();
 const getInfoGridItems = () => {
   const map = document.querySelector("#where-to-find-section");
   const gridItems = document.querySelectorAll("#info-grid div");
-  return { map, gridItems };
+  const description = document.querySelectorAll(".description-item");
+  return { map, gridItems, description };
 };
 
 const infoGridAnimateIn = () => {
-  [getInfoGridItems().map, ...getInfoGridItems().gridItems].forEach((item) => {
+  [
+    getInfoGridItems().map,
+    ...getInfoGridItems().gridItems,
+    ...getInfoGridItems().description,
+  ].forEach((item) => {
     gsap.from(item, {
       opacity: 0,
       duration: 1,

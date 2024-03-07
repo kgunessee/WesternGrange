@@ -49,7 +49,7 @@
     </header>
     <main>
       <section id="landing-page-video-section">
-        <div id="video-wrapper" class="mb-4">
+        <div id="video-wrapper" class="">
           <video
             src="assets/landing-page-video.mp4"
             autoplay
@@ -65,20 +65,27 @@
           class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
         >
           <h1
-            class="w-[90vw] border p-4 text-center font-play-fair text-4xl font-bold tracking-wider text-cornsilk"
+            class="w-[90vw] border p-4 text-center font-play-fair text-4xl font-bold tracking-wider text-cornsilk 2xl:w-[50vw] 2xl:text-6xl"
           >
             Welcome to Western Grange
           </h1>
         </div>
         <a
-          href="#info-grid"
-          class="material-symbols-outlined absolute bottom-10 left-1/2 -translate-x-1/2 transform animate-bounce py-4 text-3xl text-cornsilk"
+          href="#description"
+          class="material-symbols-outlined absolute bottom-10 left-[48%] -translate-x-1/2 transform animate-bounce text-center text-3xl text-cornsilk"
         >
           expand_more
         </a>
       </section>
-      <section id="description">
-        <p>
+      <section
+        id="description"
+        class="bg-dark-moss-green px-4 py-8 text-center text-cornsilk md:px-[5%] 2xl:px-[15%]"
+      >
+        <h3 class="description-item font-play-fair text-2xl md:text-3xl">
+          About Us
+        </h3>
+        <hr class="description-item my-8 h-[1px] border-0 bg-cornsilk" />
+        <p class="description-item font-source-sans leading-6 md:text-xl">
           Nestled amidst the serene countryside, Western Grange beckons with its
           tranquil charm and vibrant equestrian culture. Here, amidst sprawling
           landscapes and pristine facilities, riders of all ages and skill
@@ -91,79 +98,121 @@
           creating unforgettable moments and lasting connections.
         </p>
       </section>
-      <section
-        id="info-grid"
-        class="grid grid-cols-1 gap-4 text-cornsilk md:grid-cols-2 md:px-[5%]"
-      >
-        <div class="px-4 md:px-0">
-          <img loading="lazy" src="assets/horse_jump.webp" alt="" />
-        </div>
-        <div class="px-4 md:border-[1px] md:border-cornsilk md:p-4">
-          <h3 class="mb-2 font-play-fair text-2xl">Showjumping</h3>
-          <p class="font-source-sans opacity-70">
-            Our arenas serve as the canvas for riders to showcase their prowess
-            and camaraderie in a competitive yet supportive ambiance. Catering
-            to novices and seasoned riders alike, our diverse classes promise an
-            experience for all.
-          </p>
-        </div>
-        <div class="px-4 md:col-start-2 md:px-0">
-          <img loading="lazy" src="assets/pony_riding.webp" alt="" />
-        </div>
+      <section>
         <div
-          class="px-4 md:col-start-1 md:row-start-2 md:border-[1px] md:border-cornsilk md:p-4 md:text-right"
+          id="info-grid"
+          class="grid grid-cols-1 gap-4 px-4 py-8 text-cornsilk md:grid-cols-2 md:px-[5%] 2xl:px-[15%]"
         >
-          <h3 class="mb-2 font-play-fair text-2xl">Pony Rides</h3>
-          <p class="font-source-sans opacity-70">
-            Initiate young adventurers into the enchanting world of horseback
-            riding with our amiable ponies. Designed for children of all ages,
-            our pony rides offer a gentle introduction to equestrianism under
-            the watchful guidance of our seasoned staff. Set against the
-            backdrop of our scenic surroundings, these rides promise cherished
-            memories and boundless joy.
-          </p>
-        </div>
-        <div class="px-4 md:px-0">
-          <img
-            loading="lazy"
-            src="assets/horse_ride_02.webp"
-            height="800"
-            width="800"
-            alt=""
-          />
-        </div>
-        <div class="px-4 md:border-[1px] md:border-cornsilk md:p-4">
-          <h3 class="mb-2 font-play-fair text-2xl">Walks & Hacking</h3>
-          <p class="font-source-sans opacity-70">
-            Embark on a journey of exploration as you traverse the verdant
-            countryside surrounding Western Grange. Our guided hacking
-            expeditions invite riders of varying proficiencies to immerse
-            themselves in the splendor of nature. With a plethora of routes to
-            choose from, each hack promises a unique adventure tailored to
-            individual preferences and skill levels.
-          </p>
-        </div>
-        <div class="px-4 md:col-start-2 md:px-0">
-          <img loading="lazy" src="assets/stables.webp" alt="" />
-        </div>
-        <div
-          class="px-4 md:col-start-1 md:row-start-4 md:border-[1px] md:border-cornsilk md:p-4 md:text-right"
-        >
-          <h3 class="mb-2 font-play-fair text-2xl">Livery</h3>
-          <p class="font-source-sans opacity-70">
-            Entrust your equine companions to the care of our dedicated team
-            with Western Grange's comprehensive livery services. Whether you
-            seek full, part, or DIY livery, our bespoke care packages cater to
-            the individual needs of each horse. From spacious stables to
-            sprawling grazing paddocks, our facilities ensure optimal comfort
-            and well-being for your horse. With onsite amenities including
-            regular exercise regimes, grooming sessions, and access to
-            veterinary care, your horse's welfare is our utmost priority at
-            Western Grange.
-          </p>
+          <div class="text-center md:col-span-2 md:row-start-1">
+            <h3 class="font-play-fair text-2xl md:text-3xl">What we Offer</h3>
+            <hr class="my-8 h-[1px] border-0 bg-cornsilk" />
+          </div>
+          <div class="px-4 md:px-0">
+            <img
+              class="w-full"
+              loading="lazy"
+              src="assets/horse_jump.webp"
+              alt=""
+            />
+          </div>
+          <div
+            class="px-4 md:flex md:flex-col md:justify-center md:border-[1px] md:border-cornsilk md:p-4"
+          >
+            <h3
+              class="mb-2 font-play-fair text-2xl text-earth-yellow md:text-3xl"
+            >
+              Showjumping
+            </h3>
+            <p class="font-source-sans opacity-70 md:text-xl">
+              Our arenas serve as the canvas for riders to showcase their
+              prowess and camaraderie in a competitive yet supportive ambiance.
+              Catering to novices and seasoned riders alike, our diverse classes
+              promise an experience for all.
+            </p>
+          </div>
+          <div class="px-4 md:col-start-2 md:px-0">
+            <img
+              class="w-full"
+              loading="lazy"
+              src="assets/pony_riding.webp"
+              alt=""
+            />
+          </div>
+          <div
+            class="px-4 md:col-start-1 md:row-start-3 md:flex md:flex-col md:justify-center md:border-[1px] md:border-cornsilk md:p-4 md:text-right"
+          >
+            <h3
+              class="mb-2 font-play-fair text-2xl text-earth-yellow md:text-3xl"
+            >
+              Pony Rides
+            </h3>
+            <p class="font-source-sans opacity-70 md:text-xl">
+              Initiate young adventurers into the enchanting world of horseback
+              riding with our amiable ponies. Designed for children of all ages,
+              our pony rides offer a gentle introduction to equestrianism under
+              the watchful guidance of our seasoned staff. Set against the
+              backdrop of our scenic surroundings, these rides promise cherished
+              memories and boundless joy.
+            </p>
+          </div>
+          <div class="px-4 md:px-0">
+            <img
+              class="w-full"
+              loading="lazy"
+              src="assets/horse_ride_02.webp"
+              height="800"
+              width="800"
+              alt=""
+            />
+          </div>
+          <div
+            class="px-4 md:flex md:flex-col md:justify-center md:border-[1px] md:border-cornsilk md:p-4"
+          >
+            <h3
+              class="mb-2 font-play-fair text-2xl text-earth-yellow md:text-3xl"
+            >
+              Walks & Hacking
+            </h3>
+            <p class="font-source-sans opacity-70 md:text-xl">
+              Embark on a journey of exploration as you traverse the verdant
+              countryside surrounding Western Grange. Our guided hacking
+              expeditions invite riders of varying proficiencies to immerse
+              themselves in the splendor of nature. With a plethora of routes to
+              choose from, each hack promises a unique adventure tailored to
+              individual preferences and skill levels.
+            </p>
+          </div>
+          <div class="px-4 md:col-start-2 md:px-0">
+            <img
+              class="w-full"
+              loading="lazy"
+              src="assets/stables.webp"
+              alt=""
+            />
+          </div>
+          <div
+            class="px-4 md:col-start-1 md:row-start-5 md:flex md:flex-col md:justify-center md:border-[1px] md:border-cornsilk md:p-4 md:text-right"
+          >
+            <h3
+              class="mb-2 font-play-fair text-2xl text-earth-yellow md:text-3xl"
+            >
+              Livery
+            </h3>
+            <p class="font-source-sans opacity-70 md:text-xl">
+              Entrust your equine companions to the care of our dedicated team
+              with Western Grange's comprehensive livery services. Whether you
+              seek full, part, or DIY livery, our bespoke care packages cater to
+              the individual needs of each horse. From spacious stables to
+              sprawling grazing paddocks, our facilities ensure optimal comfort
+              and well-being for your horse. With onsite amenities including
+              regular exercise regimes, grooming sessions, and access to
+              veterinary care, your horse's welfare is our utmost priority at
+              Western Grange.
+            </p>
+          </div>
         </div>
       </section>
-      <section id="where-to-find-section">
+      <section id="where-to-find-section" class="my-4">
         <img
           loading="lazy"
           src="assets/location.PNG"
@@ -171,10 +220,11 @@
           class="h-[400px] w-full object-cover py-4"
         />
       </section>
+      <hr class="mt-4 hidden h-[1px] w-screen border-0 bg-cornsilk md:block" />
       <footer
-        class="flex flex-col items-center justify-evenly bg-dark-wood-green p-4 text-cornsilk"
+        class="flex flex-col items-center justify-evenly bg-dark-wood-green p-4 text-cornsilk md:flex-row"
       >
-        <div class="flex flex-col items-center gap-4">
+        <div class="flex flex-col items-center gap-4 md:items-start">
           <h3 class="font-play-fair text-2xl">Contact us</h3>
           <p class="font-source-sans">Email: info@westerngrange.co.uk</p>
           <p class="font-source-sans">Tel: 02476000000</p>
@@ -230,8 +280,8 @@
             </svg>
           </div>
         </div>
-        <hr class="mt-4 h-[1px] w-screen border-0 bg-cornsilk" />
-        <div class="my-4 flex w-full flex-col items-center">
+        <hr class="mt-4 h-[1px] w-screen border-0 bg-cornsilk md:hidden" />
+        <div class="my-4 flex w-full flex-col items-center md:w-fit">
           <form>
             <h3 class="mb-4 text-center font-play-fair text-2xl text-cornsilk">
               Join our newsletter
