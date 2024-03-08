@@ -25,7 +25,7 @@
     <header class="relative z-10">
       <nav
         id="header-info"
-        class="font-b fixed left-0 top-0 flex w-full items-center justify-between p-4 md:items-start"
+        class="font-b fixed left-0 top-0 flex w-full items-center justify-between p-4 md:items-center 2xl:px-[15%]"
       >
         <h2 id="logo" class="relative z-30 font-play-fair">WG</h2>
         <span
@@ -36,14 +36,14 @@
 
         <ul
           id="nav-menu"
-          class="fixed bottom-0 left-0 flex h-screen w-screen list-none flex-col justify-end gap-20 bg-cornsilk px-10 pb-[25%] text-right font-play-fair text-4xl text-black md:relative md:h-fit md:flex-row md:gap-4 md:bg-transparent md:pb-0 md:text-xl"
+          class="fixed bottom-0 left-0 flex h-screen w-screen list-none flex-col justify-end gap-20 bg-cornsilk px-10 pb-[25%] text-right font-play-fair text-4xl text-black md:relative md:h-fit md:flex-row md:gap-4 md:bg-transparent md:p-0 md:text-xl"
         >
-          <li class="mob-menu-item">
-            <a href="#" class="md:hover:text-yellow-100">Home</a>
+          <li class="mob-menu-item md:transform">
+            <a href="#">Home</a>
           </li>
-          <li class="mob-menu-item"><a href="#">Book</a></li>
-          <li class="mob-menu-item"><a href="#">The Grange</a></li>
-          <li class="mob-menu-item"><a href="#">About</a></li>
+          <li class="mob-menu-item md:transform"><a href="#">Book</a></li>
+          <li class="mob-menu-item md:transform"><a href="#">The Grange</a></li>
+          <li class="mob-menu-item md:transform"><a href="#">About</a></li>
         </ul>
       </nav>
     </header>
@@ -53,6 +53,7 @@
           <video
             src="assets/landing-page-video.mp4"
             autoplay
+            preload="auto"
             loop
             muted
             class="relative h-screen w-screen object-cover"

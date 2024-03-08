@@ -18,10 +18,36 @@ const getMenuItems = () => {
   };
 };
 
+const menuHoverEffect = () => {
+  getMenuItems().navMenuItems.forEach((item) => {
+    item.addEventListener("mouseover", () => {
+      gsap.to(item, {
+        y: -5,
+        duration: 0.2,
+      });
+    });
+
+    item.addEventListener("mouseout", () => {
+      gsap.to(item, {
+        y: 0,
+        duration: 0.2,
+      });
+    });
+  });
+};
+menuHoverEffect();
+
 //============================= Transition nav-bar on scroll ==============================//
 const navbarScrollEffect = () => {
   getMenuItems().navContainer.style.fontSize = "2.25rem";
   getMenuItems().mobileMenuHamburger.style.fontSize = "2.25rem";
+
+  let screenWidth = window.innerWidth;
+
+  window.addEventListener("resize", function () {
+    screenWidth = window.innerWidth;
+    console.log(screenWidth);
+  });
 
   gsap.to(["#header-info"], {
     background: "rgb(0,0,0)",
@@ -33,19 +59,31 @@ const navbarScrollEffect = () => {
       start: "bottom 100px",
       end: "bottom 100px",
       scrub: true,
-
       // Change the styling of the navbar based on scrolltrigger position (bottom of video element)
       onLeave: () => {
         getMenuItems().navContainer.style.fontSize = "1.5rem";
-        getMenuItems().navContainer.style.padding = "0.5rem 1rem";
-        getMenuItems().navContainer.style.transition = "500ms";
+        // getMenuItems().navContainer.style.padding = "0.5rem 1rem";
+        getMenuItems().navContainer.style.transition = "200ms";
         getMenuItems().mobileMenuHamburger.style.fontSize = "1.5rem";
-        getMenuItems().mobileMenuHamburger.style.transition = "500ms";
+        getMenuItems().mobileMenuHamburger.style.transition = "200ms";
+        if (screenWidth > 767) {
+          getMenuItems().navMenuItems.forEach((item) => {
+            item.style.color = "hsla(52, 94%, 94%, 1)";
+            item.style.transition = "200ms";
+            item.style.fontSize = "1rem";
+          });
+        }
       },
       onEnterBack: () => {
         getMenuItems().navContainer.style.fontSize = "2.25rem";
-        getMenuItems().navContainer.style.padding = "1rem";
+        // getMenuItems().navContainer.style.padding = "1rem";
         getMenuItems().mobileMenuHamburger.style.fontSize = "2.25rem";
+        if (screenWidth > 767) {
+          getMenuItems().navMenuItems.forEach((item) => {
+            item.style.color = "rgb(0,0,0)";
+            item.style.fontSize = "1.25rem";
+          });
+        }
       },
     },
   });
