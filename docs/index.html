@@ -25,9 +25,11 @@
     <header class="relative z-10">
       <nav
         id="header-info"
-        class="font-b fixed left-0 top-0 flex w-full items-center justify-between p-4 md:items-center 2xl:px-[15%]"
+        class="fixed left-0 top-0 flex w-full items-center p-4 md:items-center 2xl:px-[15%]"
       >
-        <h2 id="logo" class="relative z-30 font-play-fair">WG</h2>
+        <h2 id="logo" class="relative z-30 font-play-fair md:text-cornsilk">
+          WG
+        </h2>
         <span
           class="mob-menu-hamburger material-symbols-outlined relative z-30 h-fit hover:cursor-pointer md:hidden"
         >
@@ -36,14 +38,14 @@
 
         <ul
           id="nav-menu"
-          class="fixed bottom-0 left-0 flex h-screen w-screen list-none flex-col justify-end gap-20 bg-cornsilk px-10 pb-[25%] text-right font-play-fair text-4xl text-black md:relative md:h-fit md:flex-row md:gap-4 md:bg-transparent md:p-0 md:text-xl"
+          class="fixed bottom-0 left-0 z-20 flex h-screen list-none flex-col gap-20 bg-cornsilk px-10 pb-[25%] text-right font-play-fair text-4xl text-black md:relative md:h-fit md:flex-row md:gap-4 md:bg-transparent md:p-0 md:text-xl md:text-cornsilk"
         >
           <li class="mob-menu-item md:transform">
             <a href="#">Home</a>
           </li>
           <li class="mob-menu-item md:transform"><a href="#">Book</a></li>
           <li class="mob-menu-item md:transform"><a href="#">The Grange</a></li>
-          <li class="mob-menu-item md:transform"><a href="#">About</a></li>
+          <li class="mob-menu-item"><a href="#">About</a></li>
         </ul>
       </nav>
     </header>
@@ -58,7 +60,10 @@
             muted
             class="relative h-screen w-screen object-cover"
           ></video>
-          <div id="video-overlay"></div>
+          <div
+            id="video-overlay"
+            class="absolute left-0 top-0 h-screen w-full bg-black bg-opacity-30"
+          ></div>
         </div>
 
         <div
@@ -281,7 +286,7 @@
             </svg>
           </div>
         </div>
-        <hr class="mt-4 h-[1px] w-screen border-0 bg-cornsilk md:hidden" />
+        <hr class="mt-4 h-[1px] border-0 bg-cornsilk md:hidden" />
         <div class="my-4 flex w-full flex-col items-center md:w-fit">
           <form>
             <h3 class="mb-4 text-center font-play-fair text-2xl text-cornsilk">

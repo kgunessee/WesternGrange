@@ -68,8 +68,7 @@ const navbarScrollEffect = () => {
         getMenuItems().mobileMenuHamburger.style.transition = "200ms";
         if (screenWidth > 767) {
           getMenuItems().navMenuItems.forEach((item) => {
-            item.style.color = "hsla(52, 94%, 94%, 1)";
-            item.style.transition = "200ms";
+            item.style.transition = "color 200ms, font-size 200ms";
             item.style.fontSize = "1rem";
           });
         }
@@ -80,7 +79,6 @@ const navbarScrollEffect = () => {
         getMenuItems().mobileMenuHamburger.style.fontSize = "2.25rem";
         if (screenWidth > 767) {
           getMenuItems().navMenuItems.forEach((item) => {
-            item.style.color = "rgb(0,0,0)";
             item.style.fontSize = "1.25rem";
           });
         }
@@ -102,13 +100,8 @@ const menuItemHoverAnim = () => {
         duration: 0.1,
       });
 
-      item.addEventListener("mouseover", () => {
-        anim.play();
-      });
-
-      item.addEventListener("mouseout", () => {
-        anim.reverse();
-      });
+      item.onmouseover = () => anim.play();
+      item.onmouseout = () => anim.reverse();
     });
   });
 };
@@ -173,7 +166,7 @@ const infoGridAnimateIn = () => {
 
       scrollTrigger: {
         trigger: item,
-        markers: true,
+        markers: false,
         start: "top 90%",
       },
     });
